@@ -224,7 +224,7 @@ def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
     img_tag = find_local_image_tag(in_html, ELYXER_ENGINE)
     imageSrc = None
     if(img_tag):
-        pr3 ("\nIMAGES\nLet's upload your images,img_tag" + img_tag)
+        pr3 ("\nIMAGES\nLet's upload your images")
     while(img_tag):
         local_image_url = get_local_image_url(img_tag, ELYXER_ENGINE)
         valid_local_image_url = validate_url(local_image_url, in_DIR_OFFSET)
@@ -251,11 +251,9 @@ def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
             print("Please contact the author at jackdesert@gmail.com")
             handle_general_error()
         snapshot = in_html
-        pr3("local_image_url=" + local_image_url + ",imageSrc=" + imageSrc)
         in_html = in_html.replace(local_image_url, imageSrc)
         # remove style='' in html, not tested for elyxer, but should be ok
         in_html = re.sub(r'<img\ (style=.*)?\ src=',"<img src=",in_html)
-        pr3("after html replace:" + in_html)
         try:
             assert(in_html != snapshot)
         except AssertionError:
@@ -265,7 +263,6 @@ def up_images(in_html, wp_client_obj, ELYXER_ENGINE, in_DIR_OFFSET):
             handle_general_error()
 
         img_tag = find_local_image_tag(in_html, ELYXER_ENGINE)
-        pr3("upload images done, img_tag=" + img_tag)
     return(in_html)
 
 def get_dir_offset(in_input_file):
