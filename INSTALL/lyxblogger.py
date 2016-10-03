@@ -336,8 +336,8 @@ def new_shell():
     else:
         pr3('I\'m not sure what operating system you are running on.')
         pr3('Please write the author at jackdesert@gmail.com to report possible bug')
-    # GNU/Linux, Mac, and unidentified OS's call xterm
-    return('xterm -T "LyXBlogger" -fg gold -bg black -fn 10x20 -e python %s %s %s ')
+    # GNU/Linux, Mac, and unidentified OS's call rxvt
+    return('rxvt -T "LyXBlogger" -fg gold -bg black -fn 10x20 -e python %s %s %s ')
 
 
 def term_open(in_input_file):
