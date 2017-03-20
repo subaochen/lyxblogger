@@ -558,6 +558,8 @@ def get_html(input_file, CUT_FLAG):
         # no title tag was found in the body.
 
     # Eliminate everything outside the <body></body> tags
+    # from LyX 2.2, lyxHTML generated html file add dir="auto" to body tag, remove it here
+    html = html.replace('<body dir="auto">',"<body>")
     START_TAG = '<body>'
     END_TAG = '</body>'
     if (START_TAG in html):
