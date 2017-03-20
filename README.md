@@ -1,7 +1,9 @@
 # 安装方法
 
 执行如下的命令即可：
+
 `
+cd INSTALL
 sudo python ./setup-no-elyxer.py install
 `
 
@@ -9,7 +11,7 @@ sudo python ./setup-no-elyxer.py install
 
 修改/etc/X11/app-defaults/XTerm，在文件的最后增加如下的内容：
 
-`
+```
 Xft.dpi:96
 xpdf.title: PDF
 XTerm*faceSize: 10
@@ -54,7 +56,8 @@ xterm*xftAntialias: true
 xterm.cjkWidth:true
 XTerm*inputMethod: ibus
 XTerm*preeditType: Root
-`
+
+```
 
 # 使用方法
 
