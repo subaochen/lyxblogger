@@ -64,7 +64,7 @@ XTerm*preeditType: Root
 在lyx中写好文章，选择菜单“文件”->“导出”,然后选择“More formats & options…”，
 再选择LyxBlogger，即可弹出一个窗口如下：
 
-![lyxBlogger的配置窗口](https://raw.github.com/subaochen/lyxblogger/lyxblogger-config.png)
+![lyxBlogger的配置窗口](https://raw.githubusercontent.com/subaochen/lyxblogger/master/lyxblogger-configure.png)
 
 遵循页面的提示，回答几个简单的N问题就可以把文章发布到wordpress搭建的博客了。
 
