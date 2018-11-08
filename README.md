@@ -9,7 +9,7 @@ sudo python ./setup-no-elyxer.py install
 
 # 解决xterm的中文问题
 
-修改/etc/X11/app-defaults/XTerm，在文件的最后增加如下的内容：
+修改/etc/X11/app-defaults/XTerm，在文件的最后增加如下的内容（ubuntu 18.04测试通过）：
 
 ```
 Xft.dpi:96
