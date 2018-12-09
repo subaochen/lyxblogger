@@ -9,6 +9,13 @@ sudo python ./setup-no-elyxer.py install
 
 # 解决xterm的中文问题
 
+简单的方法（ubuntu 18.10下亲测）：
+1、编辑 ~/.Xresources 文件，加入
+    xterm*faceName:AR PL Uming CN
+    xterm*faceSize:12
+2、执行  xrdb -load .Xresources
+3、重启 xterm，问题解决。
+
 修改/etc/X11/app-defaults/XTerm，在文件的最后增加如下的内容（ubuntu 18.04测试通过）：
 
 ```
